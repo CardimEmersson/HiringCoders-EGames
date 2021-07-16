@@ -6,6 +6,7 @@ import { useCart } from "data/hooks/useCart";
 import { useContext, useState } from "react";
 import { ContextApi } from "contextApi";
 import { useProducts } from "data/hooks/useProducts";
+import { toast } from "react-toastify";
 
 function Main() {
   const { products } = useProducts();
@@ -42,6 +43,7 @@ function Main() {
             onSubmit={(e) => {
               e.preventDefault();
               handleEmail();
+              toast.success("Email cadastrado com sucesso!");
             }}
           >
             <input
