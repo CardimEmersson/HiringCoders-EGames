@@ -6,8 +6,10 @@ interface ContextApiProps {
   handleIsOpenCart: (isOpen: boolean) => void;
   cartData: CartDataProps[];
   handleCartData: (data: CartDataProps[]) => void;
-  isOpenModal: boolean;
-  handleIsOpenModal: (isOpen: boolean) => void;
+  isOpenModalBuy: boolean;
+  handleIsOpenModalBuy: (isOpen: boolean) => void;
+  isOpenModalRegister: boolean;
+  handleIsOpenModalRegister: (isOpen: boolean) => void;
   filter: (
     type: string,
     productA: ProductsProps,
@@ -42,12 +44,19 @@ function Provider({ children }: ProviderProps) {
     setCartData(data);
   };
 
-  // Modal
+  // Modal Buy
 
-  const [isOpenModal, setIsOpenModal] = useState(false);
+  const [isOpenModalBuy, setIsOpenModalBuy] = useState(false);
 
-  const handleIsOpenModal = (isOpen: boolean) => {
-    setIsOpenModal(isOpen);
+  const handleIsOpenModalBuy = (isOpen: boolean) => {
+    setIsOpenModalBuy(isOpen);
+  };
+
+  // Modal Register
+  const [isOpenModalRegister, setIsOpenModalRegister] = useState(false);
+
+  const handleIsOpenModalRegister = (isOpen: boolean) => {
+    setIsOpenModalRegister(isOpen);
   };
 
   // filter
@@ -80,8 +89,10 @@ function Provider({ children }: ProviderProps) {
         handleIsOpenCart,
         cartData,
         handleCartData,
-        isOpenModal,
-        handleIsOpenModal,
+        isOpenModalBuy,
+        handleIsOpenModalBuy,
+        isOpenModalRegister,
+        handleIsOpenModalRegister,
         filter,
       }}
     >

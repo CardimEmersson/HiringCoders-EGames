@@ -12,21 +12,47 @@ const HeaderContainer = styled.header`
   border-bottom: 1px solid var(--orange);
   padding: 0 4rem;
   background: var(--black);
-  .cart {
-    position: relative;
-    cursor: pointer;
 
-    .dotItems {
-      position: absolute;
-      top: 0;
-      width: 1.2rem;
-      height: 1.2rem;
-      background: var(--orange);
-      border-radius: 50%;
+  .rightArea {
+    display: flex;
+    align-items: center;
+
+    .register {
       display: flex;
-      justify-content: center;
       align-items: center;
+      border-radius: 0.25rem;
+      background: var(--orange);
+      color: var(--black);
+      padding: 0.5rem 1.5rem;
+      margin-right: 2rem;
+      font-size: 1rem;
       font-weight: bold;
+      border: 1px solid transparent;
+      transition: all 0.3s;
+
+      &:hover {
+        border: 1px solid var(--orange);
+        color: var(--orange);
+        background: transparent;
+      }
+    }
+
+    .cart {
+      position: relative;
+      cursor: pointer;
+
+      .dotItems {
+        position: absolute;
+        top: 0;
+        width: 1.2rem;
+        height: 1.2rem;
+        background: var(--orange);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
     }
   }
 

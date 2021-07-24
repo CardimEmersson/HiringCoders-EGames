@@ -30,7 +30,6 @@ const ModalBuyContainer = styled.div<ModalBuyProps>`
 
   .content {
     width: 60%;
-    height: 90%;
     background-color: var(--gray-light);
     border: none;
     border-radius: 1rem;

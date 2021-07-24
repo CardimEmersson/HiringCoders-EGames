@@ -4,17 +4,17 @@ import { useContext } from "react";
 import { ModalBuyContainer } from "./ModalBuy.styles";
 
 function ModalBuy() {
-  const { isOpenModal, handleIsOpenModal, cartData, handleCartData } =
+  const { isOpenModalBuy, handleIsOpenModalBuy, cartData, handleCartData } =
     useContext(ContextApi);
   const { total, subtotal, shippingValue } = useCart();
   return (
-    <ModalBuyContainer active={isOpenModal}>
+    <ModalBuyContainer active={isOpenModalBuy}>
       <div className="content">
         <button
           className="closeButton"
           onClick={() => {
             handleCartData([]);
-            handleIsOpenModal(false);
+            handleIsOpenModalBuy(false);
           }}
         >
           x

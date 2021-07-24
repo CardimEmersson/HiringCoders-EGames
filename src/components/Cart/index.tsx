@@ -6,7 +6,7 @@ import { CartItem } from "components/CartItem";
 import { useCart } from "data/hooks/useCart";
 
 function Cart() {
-  const { isOpenCart, handleIsOpenCart, cartData, handleIsOpenModal } =
+  const { isOpenCart, handleIsOpenCart, cartData, handleIsOpenModalBuy } =
     useContext(ContextApi);
   const { addCart, removeCart, total, subtotal, shippingValue } = useCart();
 
@@ -64,7 +64,7 @@ function Cart() {
             className="buy"
             onClick={() => {
               handleIsOpenCart(false);
-              handleIsOpenModal(true);
+              handleIsOpenModalBuy(true);
             }}
           >
             Comprar
