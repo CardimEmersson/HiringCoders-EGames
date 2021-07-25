@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import InputMask from "react-input-mask";
+import NumberFormat from "react-number-format";
 
 const FormRegister = styled.form`
   display: flex;
@@ -20,6 +22,20 @@ const FormRegister = styled.form`
     }
     > input:last-child {
       margin-left: 0.25rem;
+    }
+  }
+
+  .threeColumns {
+    width: 100%;
+    display: flex;
+
+    > input {
+      width: 33.3%;
+    }
+
+    > input:nth-child(2) {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
     }
   }
 
@@ -61,7 +77,7 @@ const FormRegister = styled.form`
   }
 `;
 
-const Input = styled.input`
+const Input = styled(InputMask)`
   width: 100%;
   border: 1px solid var(--white);
   border-radius: 0.2rem;
@@ -73,4 +89,16 @@ const Input = styled.input`
   }
 `;
 
-export { FormRegister, Input };
+const InputCurrency = styled(NumberFormat)`
+  width: 100%;
+  border: 1px solid var(--white);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+
+  &::placeholder {
+    color: var(--white);
+  }
+`;
+
+export { FormRegister, Input, InputCurrency };

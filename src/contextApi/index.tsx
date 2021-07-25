@@ -10,6 +10,8 @@ interface ContextApiProps {
   handleIsOpenModalBuy: (isOpen: boolean) => void;
   isOpenModalRegister: boolean;
   handleIsOpenModalRegister: (isOpen: boolean) => void;
+  isOpenModalRegisterProducts: boolean;
+  handleIsOpenModalRegisterProducts: (isOpen: boolean) => void;
   filter: (
     type: string,
     productA: ProductsProps,
@@ -59,6 +61,14 @@ function Provider({ children }: ProviderProps) {
     setIsOpenModalRegister(isOpen);
   };
 
+  // Modal Register Products
+  const [isOpenModalRegisterProducts, setIsOpenModalRegisterProducts] =
+    useState(false);
+
+  const handleIsOpenModalRegisterProducts = (isOpen: boolean) => {
+    setIsOpenModalRegisterProducts(isOpen);
+  };
+
   // filter
 
   const filter = (
@@ -93,6 +103,8 @@ function Provider({ children }: ProviderProps) {
         handleIsOpenModalBuy,
         isOpenModalRegister,
         handleIsOpenModalRegister,
+        isOpenModalRegisterProducts,
+        handleIsOpenModalRegisterProducts,
         filter,
       }}
     >

@@ -5,14 +5,22 @@ interface CardProductProps {
   price: number;
   score: number;
   image: string;
-  onAdd: () => void;
+  onAdd?: () => void;
+  hasAddButton?: boolean;
 }
 
-function CardProduct({ image, name, price, score, onAdd }: CardProductProps) {
+function CardProduct({
+  image,
+  name,
+  price,
+  score,
+  onAdd,
+  hasAddButton,
+}: CardProductProps) {
   return (
     <CardProductContainer>
       {/* eslint-disable-next-line */}
-      <img className="product" src={`/assets/${image}`} alt={`${name} image`} />
+      <img className="product" src={image} alt={`${name} image`} />
 
       <div className="cardBottom">
         <h2 className="title">{name}</h2>
@@ -23,9 +31,11 @@ function CardProduct({ image, name, price, score, onAdd }: CardProductProps) {
           <strong>Popularidade: </strong> {score}
         </span>
 
-        <button className="add" onClick={onAdd}>
-          <span>Adicionar</span>
-        </button>
+        {hasAddButton && (
+          <button className="add" onClick={onAdd}>
+            <span>Adicionar</span>
+          </button>
+        )}
       </div>
     </CardProductContainer>
   );

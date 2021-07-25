@@ -65,6 +65,7 @@ function ModalRegister() {
 
             <div className="twoColumns">
               <Input
+                mask=""
                 type="text"
                 name="name"
                 value={name}
@@ -73,6 +74,7 @@ function ModalRegister() {
                 required
               />
               <Input
+                mask=""
                 type="date"
                 name="birthDate"
                 value={birthDate}
@@ -82,6 +84,7 @@ function ModalRegister() {
               />
             </div>
             <Input
+              mask=""
               type="text"
               name="email"
               value={email}
@@ -92,6 +95,7 @@ function ModalRegister() {
 
             <div className="twoColumns">
               <Input
+                mask="99999-999"
                 type="text"
                 name="cep"
                 value={cep}
@@ -100,6 +104,7 @@ function ModalRegister() {
                 required
               />
               <Input
+                mask=""
                 type="text"
                 name="address"
                 value={address}
@@ -110,6 +115,7 @@ function ModalRegister() {
             </div>
             <div className="fourColumns">
               <Input
+                mask=""
                 type="text"
                 name="district"
                 value={district}
@@ -118,6 +124,7 @@ function ModalRegister() {
                 required
               />
               <Input
+                mask=""
                 type="text"
                 name="city"
                 value={city}
@@ -126,6 +133,7 @@ function ModalRegister() {
                 required
               />
               <Input
+                mask=""
                 type="text"
                 name="state"
                 value={state}
@@ -134,6 +142,7 @@ function ModalRegister() {
                 required
               />
               <Input
+                mask=""
                 type="text"
                 name="number"
                 value={number}

@@ -61,4 +61,25 @@ const HeaderContainer = styled.header`
   }
 `;
 
-export { HeaderContainer };
+const ButtonAdministrativeArea = styled.a`
+  margin-right: 2rem;
+  background: var(--green);
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    border: 1px solid var(--green);
+    color: var(--green);
+    background: transparent;
+  }
+`;
+
+export { HeaderContainer, ButtonAdministrativeArea };

@@ -1,5 +1,4 @@
 import { CartItemContainer } from "./CartItem.styles";
-import Image from "next/image";
 
 interface CartItemProps {
   image: string;
@@ -20,7 +19,8 @@ function CartItem({
 }: CartItemProps) {
   return (
     <CartItemContainer>
-      <Image src={image} alt="" width={100} height={100} />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={image} alt="" width={100} height={100} />
 
       <div className="content">
         <h2>{name}</h2>

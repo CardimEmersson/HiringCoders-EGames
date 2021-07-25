@@ -26,6 +26,10 @@ const Global = createGlobalStyle`
     cursor: pointer;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   html {
     background: var(--black);
   }

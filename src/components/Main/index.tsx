@@ -91,6 +91,7 @@ function Main() {
                 price={product.price}
                 score={product.score}
                 onAdd={() => addCart(product)}
+                hasAddButton
               />
             );
           })}
